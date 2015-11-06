@@ -39,6 +39,12 @@ public class Events implements Listener {
 	        		}
 	        	}
 			}
+		} else if(this.instance.getConfig().getString("Players." + name + "Menu") == "tradeRight"){
+			if(inv.getSlotList().contains(slot)){
+				e.setCancelled(true);
+			}
+		} else if(this.instance.getConfig().getString("Players." + name + "Menu") == "tradeLeft"){
+			
 		}
 	}
 }
